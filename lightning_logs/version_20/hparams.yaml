@@ -1,0 +1,170 @@
+activation: ReLU
+alias: null
+batch_size: 32
+drop_last_loader: false
+dropout_prob_theta: 0.0
+early_stop_patience_steps: -1
+exclude_insample_y: false
+futr_exog_list: null
+h: 1
+hist_exog_list: !!python/object/apply:pandas.core.indexes.base._new_Index
+- !!python/name:pandas.core.indexes.base.Index ''
+- data: !!python/object/apply:numpy.core.multiarray._reconstruct
+    args:
+    - !!python/name:numpy.ndarray ''
+    - !!python/tuple
+      - 0
+    - !!binary |
+      Yg==
+    state: !!python/tuple
+    - 1
+    - !!python/tuple
+      - 51
+    - !!python/object/apply:numpy.dtype
+      args:
+      - O8
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - '|'
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 63
+    - false
+    - - U.S. Field Production of Crude Oil (Thousand Barrels per Day)
+      - East Coast (PADD 1) Field Production of Crude Oil (Thousand Barrels per Day)
+      - Florida Field Production of Crude Oil (Thousand Barrels per Day)
+      - New York Field Production of Crude Oil (Thousand Barrels per Day)
+      - Pennsylvania Field Production of Crude Oil (Thousand Barrels per Day)
+      - Virginia Field Production of Crude Oil (Thousand Barrels per Day)
+      - West Virginia Field Production of Crude Oil (Thousand Barrels per Day)
+      - Midwest (PADD 2) Field Production of Crude Oil (Thousand Barrels per Day)
+      - Illinois Field Production of Crude Oil (Thousand Barrels per Day)
+      - Indiana Field Production of Crude Oil (Thousand Barrels per Day)
+      - Kansas Field Production of Crude Oil (Thousand Barrels per Day)
+      - Kentucky Field Production of Crude Oil (Thousand Barrels per Day)
+      - Michigan Field Production of Crude Oil (Thousand Barrels per Day)
+      - Missouri Field Production of Crude Oil (Thousand Barrels per Day)
+      - Nebraska Field Production of Crude Oil (Thousand Barrels per Day)
+      - North Dakota Field Production of Crude Oil (Thousand Barrels per Day)
+      - Ohio Field Production of Crude Oil (Thousand Barrels per Day)
+      - Oklahoma Field Production of Crude Oil (Thousand Barrels per Day)
+      - South Dakota Field Production of Crude Oil (Thousand Barrels per Day)
+      - Tennessee Field Production of Crude Oil (Thousand Barrels per Day)
+      - Gulf Coast (PADD 3) Field Production of Crude Oil (Thousand Barrels per Day)
+      - Alabama Field Production of Crude Oil (Thousand Barrels per Day)
+      - Arkansas Field Production of Crude Oil (Thousand Barrels per Day)
+      - Louisiana Field Production of Crude Oil (Thousand Barrels per Day)
+      - Mississippi Field Production of Crude Oil (Thousand Barrels per Day)
+      - New Mexico Field Production of Crude Oil (Thousand Barrels per Day)
+      - Texas Field Production of Crude Oil (Thousand Barrels per Day)
+      - Federal Offshore--Gulf of Mexico Field Production of Crude Oil (Thousand Barrels
+        per Day)
+      - Rocky Mountain (PADD 4) Field Production of Crude Oil (Thousand Barrels per
+        Day)
+      - Colorado Field Production of Crude Oil (Thousand Barrels per Day)
+      - Idaho Field Production of Crude Oil (Thousand Barrels per Day)
+      - Montana Field Production of Crude Oil (Thousand Barrels per Day)
+      - Utah Field Production of Crude Oil (Thousand Barrels per Day)
+      - Wyoming Field Production of Crude Oil (Thousand Barrels per Day)
+      - West Coast (PADD 5) Field Production of Crude Oil (Thousand Barrels per Day)
+      - Alaska Field Production of Crude Oil (Thousand Barrels per Day)
+      - Alaska South Field Production of Crude Oil (Thousand Barrels per Day)
+      - Alaska North Slope Crude Oil Production (Thousand Barrels per Day)
+      - Arizona Field Production of Crude Oil (Thousand Barrels per Day)
+      - California Field Production of Crude Oil (Thousand Barrels per Day)
+      - Nevada Field Production of Crude Oil (Thousand Barrels per Day)
+      - Federal Offshore PADD 5 Field Production of Crude Oil (Thousand Barrels per
+        Day)
+      - spy
+      - dji
+      - ndq
+      - eur
+      - DHHNGSP
+      - DCOILBRENTEU
+      - DCOILWTICO
+      - DFF
+      - RTWEXBGS
+  name: null
+inference_windows_batch_size: -1
+input_size: 5
+interpolation_mode: linear
+learning_rate: 0.001
+loss: !!python/object:neuralforecast.losses.pytorch.MAE
+  _backward_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _backward_pre_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _buffers: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_hooks_always_called: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_pre_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _forward_pre_hooks_with_kwargs: !!python/object/apply:collections.OrderedDict
+  - []
+  _is_full_backward_hook: null
+  _load_state_dict_post_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _load_state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _modules: !!python/object/apply:collections.OrderedDict
+  - []
+  _non_persistent_buffers_set: !!set {}
+  _parameters: !!python/object/apply:collections.OrderedDict
+  - []
+  _state_dict_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  _state_dict_pre_hooks: !!python/object/apply:collections.OrderedDict
+  - []
+  horizon_weight: null
+  is_distribution_output: false
+  output_names:
+  - ''
+  outputsize_multiplier: 1
+  training: true
+max_steps: 1000
+mlp_units:
+- &id001
+  - 512
+  - 512
+- *id001
+- *id001
+n_blocks:
+- 1
+- 1
+- 1
+n_freq_downsample:
+- 4
+- 2
+- 1
+n_pool_kernel_size:
+- 2
+- 2
+- 1
+num_lr_decays: 3
+num_workers_loader: 0
+optimizer: null
+optimizer_kwargs: null
+pooling_mode: MaxPool1d
+random_seed: 1
+scaler_type: robust
+stack_types:
+- identity
+- identity
+- identity
+start_padding_enabled: false
+stat_exog_list: null
+step_size: 1
+val_check_steps: 100
+valid_batch_size: null
+valid_loss: null
+windows_batch_size: 1024
